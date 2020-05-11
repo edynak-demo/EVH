@@ -23,9 +23,11 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up", class: "btn btn-primary btn-block" %>
+      <%= f.submit "Sign up", class: "btn btn-warning btn-block" %>
     </div>
-    <% end %>
+  <% end %>
 
+    <hr/>
+    <%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-primary btn-block" %>
   </div>
 </div>
