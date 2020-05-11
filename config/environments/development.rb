@@ -32,7 +32,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -60,4 +60,15 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.mailgun.org',
+    port: 587,
+    domain: 'sandboxe7c6820b1663404ea86e97ebb144bd69.mailgun.org',
+    authentication: 'plain',
+    user_name: 'postmaster@sandboxe7c6820b1663404ea86e97ebb144bd69.mailgun.org',
+    password: ' 63ad031a82bb18350be3e6de1c877476-0afbfc6c-99f735fa'
+  }
+
 end
