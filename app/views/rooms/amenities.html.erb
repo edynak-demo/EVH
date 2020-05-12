@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-md-3">
+    <%= render 'room_menu' %>
+  </div>
+  <div class="col-md-9">
+    <div class="panel panel-default">
+
+      <div class="panel-heading">
+        Amenities
+      </div>
+
+      <div class="panel-body">
+        <div class="container">
+          <%= form_for @room do |f| %>
+
+              <div class="row form-group">
+                <div class="col-md-4">
+                  <%= f.check_box :is_tv %> TV
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_kitchen %> Kitchen
+                </div>
+                <div class="row form-group">
+                <div class="col-md-4">
+                  <%= f.check_box :is_dishwasher %> Dishwasher
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_internet %> Internet
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-4">
+                  <%= f.check_box :is_washing_machine %> Washing Machine
+                </div>
+              <div class="row form-group">
+                <div class="col-md-4">
+                  <%= f.check_box :is_dryer %> Dryer
+                </div>
+              <div class="row form-group">
+                <div class="col-md-4">
+                  <%= f.check_box :is_heating %> Heating
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_air_conditioning %> Air Conditioning
+                </div>
+                <div class="row form-group">
+                <div class="col-md-4">
+                  <%= f.check_box :is_washing_machine %> Washing Machine
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_toiletries_provided %> Toiletries Provided
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_parking %> Parking
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_doorman %> Doorman
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_elevator %> Elevator
+                </div>
+              </div>
+              <br/><br/>
+
+              <div class="text-center">
+                <%= f.submit "Save", class: "btn btn-secondary" %>
+              </div>
+
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
